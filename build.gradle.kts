@@ -7,6 +7,8 @@ plugins {
     kotlin("plugin.spring") version "1.9.23"
 }
 
+//todo: all projects, sub projects 구분해서 적용하기
+
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
