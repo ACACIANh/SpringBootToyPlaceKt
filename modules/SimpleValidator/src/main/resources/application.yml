@@ -3,3 +3,8 @@ server:
 spring:
   application:
     name: SimpleValidator
+
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+# 역직렬화시 알수없는 타입에서 예외 발생을 방지하는데 정확한 사례를 다시 찾아봐야함\
