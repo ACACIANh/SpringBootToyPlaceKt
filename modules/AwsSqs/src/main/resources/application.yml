@@ -1,0 +1,16 @@
+server.port: 8080
+
+spring:
+  application:
+    name: AwsSqs
+
+cloud:
+  aws:
+    stack.auto: false
+    region.static: # region ??
+    credentials:
+      accessKey: # accessKey ??
+      secretKey: # secretKey ??
+    sqs:
+      queue-name: # consume ? queue name ??
+

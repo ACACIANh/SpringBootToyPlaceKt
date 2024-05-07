@@ -2,6 +2,7 @@ rootProject.name = "SpringBootToyPlaceKt"
 
 listOf(
     "SimpleValidator",
+    "AwsSqs",
     //"Something",
 ).forEach {
     include(it)
