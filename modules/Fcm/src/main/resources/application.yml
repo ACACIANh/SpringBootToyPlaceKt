@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Fcm
+
+fcm:
+  service-account-file: firebase.json #key path (required)
+  project-id: #project id (required)
+  topic-name: #topic name (if you use topic protocol required)
