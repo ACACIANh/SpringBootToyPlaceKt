@@ -11,26 +11,23 @@ import org.springframework.stereotype.Component
 class FcmConfigUtils {
 
     fun toAndroidConfig(fcmMessageData: FcmMessageData): AndroidConfig {
-
         return AndroidConfig.builder()
-            .setNotification(this.toAndroidNotification(fcmMessageData))
-            .putAllData(fcmMessageData.toAllData())
+            .setNotification(this.toAndroidNotification(fcmMessageData.default))
+            .putAllData(fcmMessageData.customDataMap())
             .putData("level", "toAndroidConfig")        // 테스트용 - 확인후 제거
             .build()
     }
 
-    private fun toAndroidNotification(fcmMessageData: FcmMessageData): AndroidNotification {
-        val default = fcmMessageData.default
+    private fun toAndroidNotification(default: FcmMessageData.Default): AndroidNotification {
         return AndroidNotification.builder()
             .setTitle(default.title + " :androidNotification")  // 테스트용 - 확인후 제거
             .setBody(default.body + " :androidNotification")    // 테스트용 - 확인후 제거
             .setImage(default.image + " :androidNotification")  // 테스트용 - 확인후 제거
-            .setDefaultSound(true)
+            .setDefaultSound(true)  // 개선포인트
             .build()
     }
 
     fun toApnsConfig(fcmMessageData: FcmMessageData): ApnsConfig {
-
         return ApnsConfig.builder()
             .setFcmOptions(this.toApnsFcmOptions(fcmMessageData.default))
             .setAps(this.toApns(fcmMessageData.config))

@@ -1,6 +1,6 @@
 package com.example.fcm.endpoint
 
-data class PushRequest(
+data class FcmSimpleRequest(
     val title: String,
     val body: String,
     val image: String,

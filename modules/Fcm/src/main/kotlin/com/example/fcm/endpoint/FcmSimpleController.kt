@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class FcmSimpleController(
-    private val fcmMessageParser: FcmMessageParser, // parser 분리
+    private val fcmSimpleMessageParser: FcmSimpleMessageParser,
     private val fcmService: FcmService,
 ) {
 
     @PostMapping("/push")
-    fun push(@RequestBody request: PushRequest): ResponseEntity<Any> {
-        val message = fcmMessageParser.parse(request)
-        fcmService.push(message)
+    fun push(@RequestBody request: FcmSimpleRequest): ResponseEntity<Any> {
+        val message = fcmSimpleMessageParser.parse(request)
+        fcmService.send(message)
         return ResponseEntity.ok().build()
     }
 }

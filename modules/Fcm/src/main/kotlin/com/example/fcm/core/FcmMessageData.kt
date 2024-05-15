@@ -5,7 +5,7 @@ class FcmMessageData(
     val custom: Custom,
     val config: Config,
 ) {
-    fun toAllData(): Map<String, String> {
+    fun customDataMap(): Map<String, String> {
         //개선 포인트 - json 으로 변환후 다시 map 으로?
         return mapOf(
             "contentsType" to custom.contentsType,
@@ -13,7 +13,7 @@ class FcmMessageData(
         )
     }
 
-    fun withDefaultAllData(): Map<String, String> {
+    fun allDataMap(): Map<String, String> {
         return mapOf(
             "title" to default.title,
             "body" to default.body,
