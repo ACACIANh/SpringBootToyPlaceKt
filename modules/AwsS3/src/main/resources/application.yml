@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+  application:
+    name: AwsS3
+
+cloud:
+  aws:
+    stack.auto: false
+    region.static: ap-northeast-2
+    credentials:
+      accessKey: #
+      secretKey: #
+    s3:
+      bucket: #
+    cdn:
+      url: #

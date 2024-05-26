@@ -1,6 +1,7 @@
 rootProject.name = "SpringBootToyPlaceKt"
 
 listOf(
+    "AwsS3",
     "AwsSqs",
     "ExceptionStrategy",
     "Fcm",
