@@ -5,6 +5,7 @@ listOf(
     "AwsSqs",
     "ExceptionStrategy",
     "Fcm",
+    "SimpleKotest",
     "SimpleValidator",
     //"Something",
 ).forEach {
