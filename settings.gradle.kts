@@ -5,6 +5,7 @@ listOf(
     "AwsSqs",
     "ExceptionStrategy",
     "Fcm",
+    "OpenCsv",
     "SimpleKotest",
     "SimpleValidator",
     //"Something",
