@@ -10,3 +10,4 @@
 * [aws profile 설정 팁](https://kim-jong-hyun.tistory.com/142)
 
 * yml 파일을 이용해 동적으로 활용한 부분이 있는데 그마저도 정적이라고 느껴질수있어 좀더 동적으로 할수 있는 방법을 찾아보자
+* presigned url 로직 추가

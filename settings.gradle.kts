@@ -8,7 +8,7 @@ listOf(
     "OpenCsv",
     "SimpleKotest",
     "SimpleValidator",
-    //"Something",
+    // "Something",
 ).forEach {
     include(it)
     project(":$it").projectDir = File("$rootDir/modules/$it")

@@ -26,3 +26,5 @@
 [Kotlin, Spring Validation 이용한 입력 데이터 유효성 검증](https://beaniejoy.tistory.com/72)
 
 [Java 에서 Kotlin, Validation 문제 해결기](https://velog.io/@carrykim/Java-%EC%97%90%EC%84%9C-Kotlin-Validation-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0%EA%B8%B0)
+
+[HttpMessageNotReadableException 참고](https://yeongchan1228.tistory.com/133)
