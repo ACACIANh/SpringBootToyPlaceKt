@@ -5,6 +5,7 @@ listOf(
     "AwsSqs",
     "ExceptionStrategy",
     "Fcm",
+    "InheritanceJpaJoined",
     "OpenCsv",
     "SimpleKotest",
     "SimpleValidator",
