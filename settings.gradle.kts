@@ -3,6 +3,7 @@ rootProject.name = "SpringBootToyPlaceKt"
 listOf(
     "AwsS3",
     "AwsSqs",
+    "DistributedLock",
     "ExceptionStrategy",
     "Fcm",
     "InheritanceJpaJoined",

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: DistributedLock
+
+logging:
+  level:
+    root: info
+    com.example.distributedlock: debug
