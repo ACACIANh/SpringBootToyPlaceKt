@@ -14,14 +14,4 @@ inline fun <reified T, ID> CrudRepository<T, ID>.findByIdOrThrow(
     ),
 ): T = findByIdOrNull(id) ?: throw e
 
-/**
- * findByIdOrThrow 와 같은 이슈 확인
- */
-inline fun <reified T, ID> CrudRepository<T, ID>.findByIdExistThrow(
-    id: ID,
-    e: Exception = IllegalStateException(
-        "${T::class.java.name.substringAfterLast('.')} Entity 를 찾을 수 없습니다. id[$id]",
-    ),
-): T? = findByIdOrNull(id)?.let { throw e }
-
 interface MarketRepository : JpaRepository<Market, Long>
