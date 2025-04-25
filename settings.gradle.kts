@@ -7,6 +7,7 @@ listOf(
     "ExceptionStrategy",
     "Fcm",
     "InheritanceJpaJoined",
+    "MemberService",
     "OpenCsv",
     "SimpleKotest",
     "SimpleValidator",
