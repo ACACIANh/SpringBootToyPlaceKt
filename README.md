@@ -20,6 +20,7 @@ Kotlin으로 구현된 Spring Boot 예제 및 유틸리티 모음입니다. 이 
 - **OpenCsv**: OpenCSV 라이브러리를 사용한 CSV 파일 처리
 - **SimpleKotest**: Kotest 프레임워크를 사용한 테스트 예제
 - **SimpleValidator**: 사용자 정의 유효성 검사 구현
+- **TransactionPropagation**: Spring 트랜잭션 전파 동작 테스트
 
 ## 요구사항
 
