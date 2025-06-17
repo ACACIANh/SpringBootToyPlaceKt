@@ -11,6 +11,7 @@ listOf(
     "OpenCsv",
     "SimpleKotest",
     "SimpleValidator",
+    "TransactionPropagation",
     // "Something",
 ).forEach {
     include(it)
