@@ -19,10 +19,14 @@ class FcmService(
         val messages = fcmMessages.map {
             fcmMessageParser.parse(it)
         }
-        return this.send(messages)
+        return this.sendMessages(messages)
     }
 
-    private fun send(messages: List<Message>): List<BatchResponse> {
+    /**
+     * Generic 타입 소거로 인한 메소드 시그니처 충돌 회피
+     * https://codechacha.com/ko/kotlin-annotations/#jvmname
+     */
+    private fun sendMessages(messages: List<Message>): List<BatchResponse> {
         if (messages.isEmpty()) {
             return listOf()
         }
