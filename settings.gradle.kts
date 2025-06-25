@@ -9,6 +9,7 @@ listOf(
     "InheritanceJpaJoined",
     "MemberService",
     "OpenCsv",
+    "ScrollPagination",
     "SimpleKotest",
     "SimpleValidator",
     "TransactionPropagation",
