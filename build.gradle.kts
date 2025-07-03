@@ -13,8 +13,8 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
 }
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 allprojects {
     group = "com.example"
@@ -46,7 +46,7 @@ subprojects {
         withType<KotlinCompile> {
             kotlinOptions {
                 freeCompilerArgs += "-Xjsr305=strict"
-                jvmTarget = "17"
+                jvmTarget = "21"
             }
         }
         withType<Test> {
