@@ -1,0 +1,20 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: swagger-is-test
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    tags-sorter: alpha
+    operations-sorter: alpha
+    display-request-duration: true
+    doc-expansion: none
+  show-actuator: true
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json

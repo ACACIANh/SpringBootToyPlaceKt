@@ -13,6 +13,7 @@ listOf(
     "ScrollPagination",
     "SimpleKotest",
     "SimpleValidator",
+    "SwaggerIsTest",
     "TransactionPropagation",
     // "Something",
 ).forEach {
