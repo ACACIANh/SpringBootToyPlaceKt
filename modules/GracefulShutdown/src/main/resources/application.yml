@@ -1,0 +1,14 @@
+server:
+  shutdown: graceful
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  task:
+    scheduling:
+      pool:
+        size: 5
+      thread-name-prefix: "my-scheduler-"
+      shutdown:
+        await-termination: true
+        await-termination-period: 10s

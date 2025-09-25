@@ -7,6 +7,7 @@ listOf(
     "DistributedLock",
     "ExceptionStrategy",
     "Fcm",
+    "GracefulShutdown",
     "InheritanceJpaJoined",
     "MemberService",
     "OpenCsv",
