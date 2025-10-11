@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <springProperty scope="context" name="appName" source="spring.application.name"/>
+
+    <!-- Loki Appender -->
+    <appender name="LOKI" class="com.github.loki4j.logback.Loki4jAppender">
+        <http>
+            <url>http://localhost:3100/loki/api/v1/push</url>
+        </http>
+        <format>
+            <label>
+                <pattern>app=${appName},host=${HOSTNAME},level=%level</pattern>
+                <readMarkers>true</readMarkers>
+            </label>
+            <message>
+                <pattern>
+                    {
+                    "timestamp": "%d{ISO8601}",
+                    "level": "%level",
+                    "thread": "%thread",
+                    "logger": "%logger{36}",
+                    "traceId": "%X{traceId:-}",
+                    "spanId": "%X{spanId:-}",
+                    "message": "%msg",
+                    "exception": "%ex"
+                    }
+                </pattern>
+            </message>
+            <sortByTime>true</sortByTime>
+        </format>
+    </appender>
+
+    <!-- Console Appender with trace context -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{36}) [traceId=%X{traceId:-}, spanId=%X{spanId:-}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Async wrapper for Loki -->
+    <appender name="ASYNC_LOKI" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="LOKI"/>
+        <queueSize>1000</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC_LOKI"/>
+    </root>
+
+    <logger name="com.ppfriends.observability" level="DEBUG"/>
+</configuration>

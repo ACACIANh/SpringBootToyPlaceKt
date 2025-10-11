@@ -10,6 +10,7 @@ listOf(
     "GracefulShutdown",
     "InheritanceJpaJoined",
     "MemberService",
+    "Observability",
     "OpenCsv",
     "ScrollPagination",
     "SimpleKotest",
